@@ -8,6 +8,15 @@ $miNewCon->username = "root";
 $miNewCon->password = "";
 $miNewCon->getConnection();
 
+class informacion
+{
+    public function valores()
+    {
+    
+    
+    }
+}
+
 $tablas = array("davivienda5206", "davivienda8515");
 for ($i = 0; $i < sizeof($tablas); $i++) {
     $resultados = mysqli_query($miNewCon->conexion, "SELECT * FROM $tablas[$i]");

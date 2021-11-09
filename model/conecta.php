@@ -22,25 +22,3 @@ class data_connect
         }
     }
 }
-
-// if ($this->conexion->connect_errno) {
-//     echo "No se ha podido establecer la conexion";
-//     exit();
-// } else {
-//     // echo "Conexion exitosa, aqui estan los datos\n";
-//     return $this->conexion;
-// }
-
-
-// try {
-
-//     if ($miNewCon->conexion->connect_errno) {
-//         throw new Exception("<p>No se ha podido establecer la conexion</p>", 1);
-//         // exit();
-//     } else {
-//         // echo "Conexion exitosa, aqui estan los datos\n";
-
-//     }
-// } catch (Exception $th) {
-//     echo "<p> Error encontrado: </p>" . $th->getMessage() . "\n";
-// }
