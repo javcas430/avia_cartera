@@ -27,8 +27,8 @@ class ServicioTablaInfo
         $query = "SELECT * FROM davivienda8515 WHERE doc = $id";
         $resultados = mysqli_query($this->conexion, $query);
         if ($resultados) {
-            $datosTabla = mysqli_fetch_assoc($resultados);
-            $response = array("response" => true, "body" => $datosTabla);
+            $datosTabla = mysqli_fetch_all($resultados);
+            // $response = array("response" => true, "body" => $datosTabla);
         } else {
             $response = array("response" => false, "body" => [""]);
         }
