@@ -26,13 +26,13 @@ for ($i = 0; $i < sizeof($tablas); $i++) {
         $row[] = $consulta['ciudad'];
         $row[] = $consulta['id'];
 
-        // if ($cast < 50000000) {
-        //     $row[] = "BAJO";
-        // } elseif ($cast >= 50000000 && $cast <= 150000000) {
-        //     $row[] = "MEDIO";
-        // } elseif ($cast > 150000000) {
-        //     $row[] = "ALTO";
-        // }
+        if ($cast < 50000000) {
+            $row[] = "BAJO";
+        } elseif ($cast >= 50000000 && $cast <= 150000000) {
+            $row[] = "MEDIO";
+        } elseif ($cast > 150000000) {
+            $row[] = "ALTO";
+        }
         $arr[] = $row;
     }
 }
