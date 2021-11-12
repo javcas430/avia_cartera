@@ -1,5 +1,5 @@
 $(document).ready(function() {
     $('#example').DataTable({
-        "ajax": '../controller/mainTable.php'
+        "ajax": '../controller/userTable.php'
     });
 });

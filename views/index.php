@@ -1,7 +1,7 @@
 <?php
 
 $templateFinal = implode("",file("../templates/index.html"));
-$tabla = implode("",file("../templates/tabla.html"));
+$tabla = implode("",file("../templates/mainTabla.html"));
 
 $templateFinal = str_replace("[TABLA]"                ,$tabla                ,$templateFinal);
 $templateFinal = str_replace("[GRAFICA]"              ,$tabla                ,$templateFinal);

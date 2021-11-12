@@ -25,16 +25,16 @@ class ServicioTablaInfo
     public function GetDatoDoc($id)
     {
         $query = "SELECT * FROM davivienda8515 WHERE doc = $id";
-        $resultados = mysqli_query($this->conexion, $query);
-        if ($resultados) {
-            $datosTabla = mysqli_fetch_all($resultados);
-            // $response = array("response" => true, "body" => $datosTabla);
+        $consulta = mysqli_query($this->conexion, $query);
+        if ($consulta) {
+            $resultados = mysqli_fetch_all($consulta);
+            // $resultados = array("response" => true, "body" => $resultados);
         } else {
-            $response = array("response" => false, "body" => [""]);
+            $resultados = array("response" => false, "body" => [""]);
         }
-        return $response;
+        return $resultados;
     }
-
+ 
     public function GetDatoOfi($id)
     {
         $query = "SELECT * FROM davivienda8515 WHERE ofi = $id";
