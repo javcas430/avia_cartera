@@ -1,7 +1,7 @@
 <?php
 
 $hostname = "localhost";
-$database = "davivienda2";
+$database = "carterafacil";
 $username = "root";
 $password = "";
 

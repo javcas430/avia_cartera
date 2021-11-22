@@ -11,7 +11,7 @@ class ServicioTablaInfo
 
     public function GetInfoTabla()
     {
-        $query = "SELECT * FROM davivienda8515";
+        $query = "SELECT * FROM cartera";
         $consulta = mysqli_query($this->conexion, $query);
         if ($consulta) {
             $resultados = mysqli_fetch_all($consulta);
@@ -34,7 +34,7 @@ class ServicioTablaInfo
         }
         return $resultados;
     }
- 
+
     public function GetDatoOfi($id)
     {
         $query = "SELECT * FROM davivienda8515 WHERE ofi = $id";
@@ -46,5 +46,19 @@ class ServicioTablaInfo
             $response = array("response" => false, "body" => [""]);
         }
         return $response;
+    }
+
+    public function GetContactInfo()
+    {
+        // $query = "SELECT DISTINCT numero, razon_social, telefono, email_intercambio, cliente FROM datoscontacto INNER JOIN movimientos ON movimientos.cliente = datoscontacto.numero";
+        $query = "SELECT DISTINCT * FROM datoscontacto";
+        $consulta = mysqli_query($this->conexion, $query);
+        if ($consulta) {
+            $resultados = mysqli_fetch_all($consulta);
+            // $resultados = array("response" => true, "body" => $resultados);
+        } else {
+            $resultados = array("response" => false, "body" => [""]);
+        }
+        return $resultados;
     }
 }
