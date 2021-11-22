@@ -1,13 +1,11 @@
 <?php
 
 $templateFinal = implode("",file("../templates/index.html"));
-$header = implode("",file("../templates/header.html"));
+$tabla = implode("",file("../templates/mainTabla.html"));
 
-$templateFinal = str_replace(
-                            "[NAV]",
-                            $header, 
-                            $templateFinal
-                        );
+$templateFinal = str_replace("[TABLA]"                ,$tabla                ,$templateFinal);
+$templateFinal = str_replace("[GRAFICA]"              ,$tabla                ,$templateFinal);
+$templateFinal = str_replace("[TABLA2]"               ,$tabla                ,$templateFinal);
 echo $templateFinal;
 
 ?>

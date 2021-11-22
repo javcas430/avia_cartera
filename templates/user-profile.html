@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de usuario</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../assets/svg/logos/images.svg">
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- CSS Front Template -->
+    <link rel="stylesheet" href="../assets/css/theme.min.css">
+</head>
+
+<body>
+    <header id="header" class="navbar navbar-expand-lg navbar-fixed navbar-height navbar-flush navbar-container navbar-bordered bg-soft-info">
+        <a href="../views/index.php" aria-label="Front">
+            <h5 class="bg-success opacity-lg"><img class="navbar-brand-logo-short" src="../assets/svg/logos/images.svg" alt="Logo"> Volver al principio
+                <img class="navbar-brand-logo-short" src="../assets/svg/logos/images.svg" alt="Logo">
+            </h5>
+        </a>
+
+    </header>
+    <main id="content" role="main" class="main pointer-event">
+        [USER-TABLA]
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+
+    <!-- JS database info-->
+    <script src="../js/userTable.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var table = $('#example').DataTable();
+
+            $('#example tbody').on('click', 'tr', function() {
+                if ($(this).hasClass('selected')) {
+                    $(this).removeClass('selected');
+                } else {
+                    table.$('tr.selected').removeClass('selected');
+                    $(this).addClass('selected');
+                }
+            });
+
+            $('#button').click(function() {
+                table.row('.selected').remove().draw(false);
+            });
+        });
+    </script>
+</body>
+
+</html>
