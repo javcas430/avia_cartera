@@ -6,7 +6,9 @@
 
 $(document).ready(function() {
     $('#principal').DataTable({
-        "ajax": '../controller/mainTable.php'
+        "ajax": '../controller/mainTable.php',
+        "scrollX": true
+
     });
     var table = $('#principal').DataTable();
 
