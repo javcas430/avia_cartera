@@ -50,8 +50,9 @@ class ServicioTablaInfo
 
     public function GetContactInfo()
     {
-        // $query = "SELECT DISTINCT numero, razon_social, telefono, email_intercambio, cliente FROM datoscontacto INNER JOIN movimientos ON movimientos.cliente = datoscontacto.numero";
-        $query = "SELECT DISTINCT * FROM datoscontacto";
+        $query = "SELECT DISTINCT cartera.nit, datoscontacto.NIT, datoscontacto.ContactoCliente, datoscontacto.Email 
+                    FROM cartera, datoscontacto WHERE cartera.nit = datoscontacto.NIT";
+        // $query = "SELECT * FROM datoscontacto";
         $consulta = mysqli_query($this->conexion, $query);
         if ($consulta) {
             $resultados = mysqli_fetch_all($consulta);

@@ -1,13 +1,27 @@
-// $(document).ready(function () {
-//     $('#example').DataTable({
-//         "ajax": '../controller/mainTable.php'
-//     });
-// });
-
 $(document).ready(function() {
+    // var hiperObj = [
+    //     "ajax" = '../controller/mainTable.php'
+    // ];
     $('#principal').DataTable({
-        "ajax": '../controller/mainTable.php'
+        "ajax": '../controller/mainTable.php',
+        "scrollX": true,
+        // "data": hiperObj,
+        // "columns": [
+        //     { "data": "information" },
+        //     {
+        //         "data": "NIT",
+        //         "render": function(data, type, row, meta) {
+        //             if (type === 'display') {
+        //                 data = '<a href="' + data + '">' + data + '</a>';
+        //             }
+
+        //             return data;
+        //         }
+        //     }
+        // ]
+
     });
+
     var table = $('#principal').DataTable();
 
     $('#principal').on('click', 'tr', function() {
