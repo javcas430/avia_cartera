@@ -5,21 +5,6 @@ $(document).ready(function() {
     $('#principal').DataTable({
         "ajax": '../controller/mainTable.php',
         "scrollX": true,
-        // "data": hiperObj,
-        // "columns": [
-        //     { "data": "information" },
-        //     {
-        //         "data": "NIT",
-        //         "render": function(data, type, row, meta) {
-        //             if (type === 'display') {
-        //                 data = '<a href="' + data + '">' + data + '</a>';
-        //             }
-
-        //             return data;
-        //         }
-        //     }
-        // ]
-
     });
 
     var table = $('#principal').DataTable();

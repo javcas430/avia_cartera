@@ -19,7 +19,7 @@ for ($i = 0; $i < $largo; $i++) {
     } elseif ($cast >= 300000 && $cast <= 600000) {
         $myServiceFunction[$i][7] = "<td><FONT COLOR=#EC9A3C font-weight:bold>" . $myServiceFunction[$i][7] . "</FONT></td></tr>";
         array_push($myServiceFunction[$i], "<td><span class='legend-indicator bg-warning'></span>MEDIO</td></tr>");
-    } elseif ($cast > 600000) {
+    } else {
         $cliente = $myServiceFunction[$i][7];
         $myServiceFunction[$i][7] = "<td><FONT COLOR=#ED4C78 font-weight:bold>" . $myServiceFunction[$i][7] . "</FONT></td></tr>";
         array_push($myServiceFunction[$i], "<td><span class='legend-indicator bg-danger'></span>ALTO</td></tr>");

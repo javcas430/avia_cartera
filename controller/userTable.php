@@ -1,5 +1,5 @@
 <?php
-include("../model/conecta.php");
+include "../model/conecta.php";
 include "../services/TableReader.php";
 
 $avia_contactos = new ServicioTablaInfo($conexion);

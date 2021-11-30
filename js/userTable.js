@@ -23,3 +23,19 @@ $(document).ready(function() {
         }
     });
 });
+
+
+
+
+// $(document).ready(function() {
+//     var selectedOption = $('#opselect').find(":selected").text();
+//     manageCategoriesTable = $('#example').DataTable({
+//         destroy: true,
+//         'ajax': {
+//             'url': '../controller/userTable.php',
+//             'data': { 'opselect': selectedOption },
+//             'type': 'post'
+//         },
+//         'order': []
+//     });
+// });
